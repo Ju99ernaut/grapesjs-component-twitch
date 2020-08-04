@@ -1,0 +1,24 @@
+{
+  "name": "grapesjs-component-twitch",
+  "version": "1.0.0",
+  "description": "Grapesjs Component Twitch",
+  "main": "dist/grapesjs-component-twitch.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ju99ernaut/grapesjs-component-twitch.git"
+  },
+  "scripts": {
+    "start": "grapesjs-cli serve",
+    "build": "grapesjs-cli build",
+    "bump": "npm version patch -m 'Bump v%s'"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin",
+    "embed",
+    "twitch"
+  ],
+  "devDependencies": {
+    "grapesjs-cli": "^1.0.12"
+  }
+}
