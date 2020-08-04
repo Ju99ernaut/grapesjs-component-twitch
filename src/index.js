@@ -8,14 +8,14 @@ export default (editor, opts = {}) => {
       i18n: {},
       // default options
       script: 'https://embed.twitch.tv/embed/v1.js',
-      // Object to extend the default block, eg. `{ label: 'Typed', ... }`
+      // Object to extend the default block, eg. `{ label: 'Twitch', ... }`
       // Pass a falsy value to avoid adding the block
       block: {},
 
-      // Label of the twitch block
+      // Label for twitch block
       label: 'Twitch',
 
-      // Category twitct
+      // Category for twitch block
       category: 'Basic',
 
       // Customize the component props. The final object should be returned
