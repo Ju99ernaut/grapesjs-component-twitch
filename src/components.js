@@ -80,7 +80,7 @@ export default (editor, opts = {}) => {
           ...traits
         ],
         script() {
-          const collection = '{[ collection ]}' ? JSON.parse('{[ collection ]}') : '';
+          const collection = '{[ collection ]}';
           const channel = '{[ channel ]}';
           const video = '{[ video ]}';
           const int = num => parseInt(num, 10) || 0;
@@ -95,16 +95,17 @@ export default (editor, opts = {}) => {
               width: int('{[ width ]}'),
             };
 
-            if (collection && collection.length) {
-              config.collection = collection;
-            }
-
             if (channel && channel.length) {
               config.channel = channel;
-            }
-
-            if (video && video.length) {
-              config.video = video;
+            } else if (video && video.length) {
+              if (collection && collection.length) {
+                config.collection = {
+                  video,
+                  collection
+                };
+              } else {
+                config.video = video;
+              }
             }
 
             new Twitch.Embed(el.id, config);
@@ -131,10 +132,11 @@ export default (editor, opts = {}) => {
     view: defaultView.extend({
       init() {
         const comp = this.model.get('components');
+        this.model.get('attributes').style = "padding:10px";
         if (!comp.length) {
           comp.reset();
           comp.add(`
-            <div style="padding:70px; font-size: 1rem">Link to channel, collection or video from twitch in settings</div>
+            <div style="margin-left:70px; margin-right:70px; padding: 10px; font-size: 1rem">Link to channel, single video ,or video and collection from twitch in settings panel</div>
           `);
         }
       }

@@ -1,6 +1,35 @@
 # Grapesjs Component Twitch
 
-Dedicated twitch block based on docs [here](https://dev.twitch.tv/docs/embed/everything).
+Twitch embed component based on docs [here](https://dev.twitch.tv/docs/embed/everything).
+
+> Requires server for more accurate preview in the `grapesjs` editor
+
+### HTML
+```html
+<link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
+<script src="https://unpkg.com/grapesjs"></script>
+<script src="https://unpkg.com/grapesjs-component-twitch"></script>
+
+<div id="gjs"></div>
+```
+
+### JS
+```js
+const editor = grapesjs.init({
+	container: '#gjs',
+  height: '100%',
+  fromElement: true,
+  plugins: ['grapesjs-component-twitch'],
+});
+```
+
+### CSS
+```css
+body, html {
+  margin: 0;
+  height: 100%;
+}
+```
 
 ## Summary
 
@@ -20,7 +49,41 @@ Dedicated twitch block based on docs [here](https://dev.twitch.tv/docs/embed/eve
 | `block` | Options for twitch block  | `{}` |
 | `label` | Twitch block label | `Twitch` |
 | `category` | Twitch block categort | `basic` |
-| `props` | Customize component props | `props: i => i` |
+| `props` | Customize component props | `i => i` |
+
+## Download
+
+* CDN
+  * `https://unpkg.com/grapesjs-component-twitch`
+* NPM
+  * `npm i grapesjs-component-twitch`
+* GIT
+  * `git clone https://github.com/Ju99ernaut/grapesjs-component-twitch.git`
+
+
+
+## Usage
+
+Directly in the browser
+```html
+<link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/grapesjs"></script>
+<script src="path/to/grapesjs-component-twitch.min.js"></script>
+
+<div id="gjs"></div>
+
+<script type="text/javascript">
+  var editor = grapesjs.init({
+      container: '#gjs',
+      // ...
+      plugins: ['grapesjs-component-twitch'],
+      pluginsOpts: {
+        'grapesjs-component-twitch': { /* options */ }
+      }
+      // ...
+  });
+</script>
+```
 
 
 ## Modern javascript
@@ -47,6 +110,13 @@ const editor = grapesjs.init({
 
 ## Development
 
+Clone the repository
+
+```sh
+$ git clone https://github.com/Ju99ernaut/grapesjs-component-twitch.git
+$ cd grapesjs-component-twitch
+```
+
 Install dependencies
 
 ```sh
@@ -64,3 +134,7 @@ Build the source
 ```sh
 $ npm run build
 ```
+
+## License
+
+MIT
