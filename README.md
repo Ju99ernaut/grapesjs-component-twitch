@@ -16,7 +16,7 @@ Twitch embed component based on docs [here](https://dev.twitch.tv/docs/embed/eve
 ### JS
 ```js
 const editor = grapesjs.init({
-	container: '#gjs',
+  container: '#gjs',
   height: '100%',
   fromElement: true,
   plugins: ['grapesjs-component-twitch'],
@@ -48,7 +48,7 @@ body, html {
 | `script` | Twitch embed script | `https://embed.twitch.tv/embed/v1.js` |
 | `block` | Options for twitch block  | `{}` |
 | `label` | Twitch block label | `Twitch` |
-| `category` | Twitch block categort | `basic` |
+| `category` | Twitch block category | `Basic` |
 | `props` | Customize component props | `i => i` |
 
 ## Download
