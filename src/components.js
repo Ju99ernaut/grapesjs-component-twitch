@@ -108,6 +108,7 @@ export default (editor, opts = {}) => {
               }
             }
 
+            (channel.length || video.length) && (el.innerText = '');
             new Twitch.Embed(el.id, config);
           };
 
@@ -129,17 +130,5 @@ export default (editor, opts = {}) => {
         });
       }
     },
-    view: defaultView.extend({
-      init() {
-        const comp = this.model.get('components');
-        this.model.get('attributes').style = "padding:10px";
-        if (!comp.length) {
-          comp.reset();
-          comp.add(`
-            <div style="margin-left:70px; margin-right:70px; padding: 10px; font-size: 1rem">Link to channel, single video ,or video and collection from twitch in settings panel</div>
-          `);
-        }
-      }
-    }),
   });
 };

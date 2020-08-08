@@ -19,7 +19,11 @@ export default (editor, opts = {}) => {
     activate: true,
     select: true,
     content: {
-      type: cmpId
+      type: cmpId,
+      content: 'Link to channel, single video ,or video and collection from twitch in settings panel',
+      style: {
+        padding: '10px'
+      }
     },
     ...block,
   });
