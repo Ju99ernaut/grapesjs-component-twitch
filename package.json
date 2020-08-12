@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-component-twitch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Grapesjs Component Twitch",
   "main": "dist/grapesjs-component-twitch.min.js",
   "repository": {

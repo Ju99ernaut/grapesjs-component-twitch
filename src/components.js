@@ -4,7 +4,6 @@ import {
 
 export default (editor, opts = {}) => {
   const domc = editor.DomComponents;
-  const defaultView = domc.getType('default').view;
   const {
     keys
   } = Object;
