@@ -20,7 +20,7 @@ export default (editor, opts = {}) => {
 
   // Some options as on
   // https://dev.twitch.tv/docs/embed/everything
-  const typedProps = {
+  const twitchProps = {
     channel: '',
     width: 1100,
     height: 480,
@@ -54,23 +54,30 @@ export default (editor, opts = {}) => {
     return 'text';
   };
 
-  const traits = keys(typedProps)
+  const getPlaceholder = value => {
+    if (value == 'channel') return opts.channelPlaceholder;
+    if (value == 'video') return opts.videoPlaceholder;
+    if (value == 'collection') return opts.collectionPlaceholder;
+    return 'placeholder';
+  }
+
+  const traits = keys(twitchProps)
     .map(name => ({
       changeProp: 1,
-      type: getTraitType(typedProps[name]),
-      options: typedProps[name],
+      type: getTraitType(twitchProps[name]),
+      options: twitchProps[name],
       min: 0,
-      placeholder: 'eg. Some ID',
+      placeholder: getPlaceholder(name),
       name,
     }));
 
-  typedProps.layout = 'video-with-chat';
-  typedProps.theme = 'light';
+  twitchProps.layout = 'video-with-chat';
+  twitchProps.theme = 'light';
 
   domc.addType(cmpId, {
     model: {
       defaults: opts.props({
-        ...typedProps,
+        ...twitchProps,
         twitchsrc: opts.script,
         droppable: 0,
         traits: [

@@ -49,6 +49,9 @@ body, html {
 | `block` | Options for twitch block  | `{}` |
 | `label` | Twitch block label | `Twitch` |
 | `category` | Twitch block category | `Basic` |
+| `channelPlaceholder` | Channel trait placeholder | `username here` |
+| `videoPlaceholder` | Video trait placeholder | `video here` |
+| `collectionPlaceholder` | Collection trait placeholder | `collection here` |
 | `props` | Customize component props | `i => i` |
 
 ## Download

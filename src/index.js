@@ -16,6 +16,16 @@ export default (editor, opts = {}) => {
       // Category for twitch block
       category: 'Basic',
 
+      // Channel placeholder
+      channelPlaceholder: 'username here',
+
+      // Video placeholder
+      videoPlaceholder: 'video here',
+
+      // collection placeholder
+      collectionPlaceholder: 'collection here',
+
+
       // Customize the component props. The final object should be returned
       // from the function.
       /**
