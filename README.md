@@ -4,6 +4,8 @@ Twitch embed component based on docs [here](https://dev.twitch.tv/docs/embed/eve
 
 > Requires server for more accurate preview in the `grapesjs` editor
 
+[DEMO](https://codepen.io/ju99ernaut/pen/BaKGadb)
+
 ### HTML
 ```html
 <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
