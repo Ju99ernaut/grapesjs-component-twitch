@@ -19,7 +19,7 @@
     "twitch"
   ],
   "devDependencies": {
-    "grapesjs-cli": "^1.0.12"
+    "grapesjs-cli": "^3.0.1"
   },
   "author": "Brendon Ngirazi",
   "license": "MIT"
