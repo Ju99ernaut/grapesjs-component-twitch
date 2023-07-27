@@ -22,8 +22,8 @@ export default (editor, opts = {}) => {
   // https://dev.twitch.tv/docs/embed/everything
   const twitchProps = {
     channel: '',
-    width: 1100,
-    height: 480,
+    width: '100%',
+    height: '600',
     'allow-full-screen': true,
     layout: [{
         id: 'video-with-chat',
